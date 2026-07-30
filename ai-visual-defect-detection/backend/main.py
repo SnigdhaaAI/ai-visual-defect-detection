@@ -37,8 +37,8 @@ import io
 # Import our existing, already-built modules.
 # NOTE: importing backend.inference triggers the model to load ONCE,
 # at import time (see inference.py) -- not on every request.
-from backend.inference import predict_image
-from backend.history import save_prediction, get_all_predictions
+from inference import predict_image
+from history import save_prediction, get_all_predictions
 
 
 # ----------------------------------------------------------------------------
