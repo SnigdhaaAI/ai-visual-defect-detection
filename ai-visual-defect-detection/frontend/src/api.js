@@ -1,6 +1,6 @@
 // Central API client for the VisionInspect AI backend.
 // Base URL is intentionally left exactly as the working backend expects.
-const BASE_URL = 'http://localhost:8000'
+const BASE_URL = 'https://ai-visual-defect-detection-6.onrender.com'
 
 async function parseJsonSafe(response) {
   try {
