@@ -69,9 +69,13 @@ MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024
 ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "http://localhost:5173",   # Vite's default dev server port.
+    "http://localhost:5173",
     "http://127.0.0.1:5173",
+
+    "https://ai-visual-defect-detection.vercel.app",
+    "https://ai-visual-defect-detection-zoje.vercel.app",
 ]
+
 
 
 # ----------------------------------------------------------------------------
