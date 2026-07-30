@@ -1,24 +1,12 @@
-# NOTE ON TORCH / TORCHVISION:
-# These two lines are intentionally left WITHOUT a hard version pin.
-# If you already have a working CUDA-enabled PyTorch installed locally
-# (e.g. PyTorch 2.11.0+cu128 for an RTX 4050), do NOT run this file's
-# torch/torchvision lines again -- a plain `pip install -r requirements.txt`
-# would fetch the generic PyPI build and can silently replace your
-# CUDA build with a CPU-only one.
-#
-# Local development (GPU machine): skip these two lines entirely --
-# your existing CUDA-enabled install already satisfies them.
-# Fresh machine / deployment (no PyTorch yet): install a matching
-# build for your platform from https://pytorch.org/get-started/locally/
-# first, THEN install the rest of this file.
 torch>=2.3
 torchvision>=0.18
 
 fastapi==0.111.0
 uvicorn[standard]==0.30.1
 python-multipart==0.0.9
-pillow==10.3.0
+
+pillow>=10.4.0
 scikit-learn==1.5.0
 pandas==2.2.2
 matplotlib==3.9.0
-numpy==1.26.4
+numpy>=1.26.4
