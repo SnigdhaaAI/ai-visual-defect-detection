@@ -1,0 +1,42 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# --- Node / Frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Editors ---
+.vscode/
+.idea/
+
+# --- Dataset (not required for deployment) ---
+dataset/
+casting_data_raw/
+
+# --- Runtime uploads ---
+uploads/*
+!uploads/.gitkeep
+
+# --- Prediction history ---
+data/*.csv
+!data/.gitkeep
+
+# --- Evaluation outputs ---
+results/*.png
+results/*.txt
+!results/.gitkeep
+
+# --- Secrets ---
+.env
+*.env

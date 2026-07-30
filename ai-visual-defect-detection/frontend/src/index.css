@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #323c48 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #323c48;
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #48525f;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-base-950 text-ink-100 font-body antialiased;
+  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(63, 214, 200, 0.06), transparent);
+}
+
+:focus-visible {
+  outline: 2px solid #3fd6c8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Glass panel — signature surface treatment */
+.glass-panel {
+  background: linear-gradient(180deg, rgba(20, 25, 32, 0.75) 0%, rgba(12, 15, 19, 0.75) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Hairline border with subtle top highlight, industrial-panel style */
+.panel-edge {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+/* Diagonal hazard stripe accent, used sparingly */
+.hazard-stripe {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(240, 178, 62, 0.5),
+    rgba(240, 178, 62, 0.5) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #6b7482 25%, #f1f4f7 50%, #6b7482 75%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 2.5s linear infinite;
+}
